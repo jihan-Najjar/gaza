@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +13,311 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); */
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.login {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+  font-family: 'Comfortaa', cursive;
+
+}
+
+.login .form {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 10px;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+
+}
+
+.login .form h3 {
+  font-size: 40px;
+  color: #4b6cb7;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.login .form p.error {
+  margin: 0 0 10px 10px;
+  text-align: left;
+  font-size: 10px;
+  color: red;
+}
+
+.login .form input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Comfortaa', cursive;
+}
+
+.login .form input:focus {
+  background: #dbdbdb;
+}
+
+.login .form button {
+  font-family: 'Comfortaa', cursive;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4b6cb7;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.login .form button:active {
+  background: #395591;
+}
+
+/* end login style */
+.header-search {
+  position: fixed;
+  /* top: 0; */
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  height: 15vh;
+  padding: 0 3em;
+  flex-direction: column;
+  /* align-items: center; */
+
+  /* background: linear-gradient(90deg,  #182848 100%,#4b6cb7 0%); */
+  background-color: white;
+  border-bottom: 2px solid #182848;
+  z-index: 1;
+}
+
+.userIcon-menu {
+  padding: .5em .7em;
+  display: flex;
+  gap: 10px;
+  /* border: 2px solid  ; */
+  border: 2px solid #182848;
+  border-radius: 20px;
+
+}
+
+.search-bar {
+  background-color: #7f8797;
+  background-color: #f1e9e9;   
+  
+  /* display: flex; */
+  /* max-width: max-content; */
+  border-radius: 50px;
+  padding: .71em 1.7em;
+  height: 6vh;
+
+}
+
+
+.ciSearch {
+  background: none;
+  border: none;
+}
+
+.ciSearch-icon {
+  /* font-weight: 900; */
+  font-size: 45px;
+}
+
+.app {
+  position: relative;
+  top: 15vh;
+  background-color: white;
+  height: 90vh;
+  padding: 2em;
+}
+
+.gg {
+  background-color: white;
+
+}
+
+h3 {
+  text-wrap: wrap;
+}
+
+
+.date-container {
+  /* position: relative; */
+  cursor: pointer;
+}
+
+.date-placeholder {
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 0; */
+  /* transform: translateY(-50%); */
+  color: rgb(5, 4, 4);
+  pointer-events: none;
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+input[type="date"] {
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  height: 100%;
+  opacity: 100;
+  cursor: pointer;
+}
+
+
+
+/*  */
+/*  */
+
+
+
+
+
+
+
+
+
+
+
+/* test */
+/* Card.css */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.RCard,
+.HCard {
+  position: relative;
+  width: 400px;
+  height: 550px;
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.HCard:hover ,.RCard:hover {
+  background-color: #f1e9e9;              /* Default color (e.g., gray) */
+  cursor: pointer;          /* Change cursor to pointer on hover */
+  transition: color 0.3s;   /* Smooth transition for color change */
+  /* z-index: 1000; */
+}
+
+.room-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+
+}
+
+.CiHeart {
+  position: absolute;
+  right: 37px;
+  top: 29px;
+  font-size: 35px;
+  color: red;
+
+  /* background-color: red; */
+
+}
+
+.faHeart {
+  position: absolute;
+  right: 37px;
+  top: 29px;
+  font-size: 35px;
+  color: red;
+
+}
+
+.CiHeart:focus {
+  background-color: red;
+  font-size: 135px;
+
+}
+
+.image-thumbnails {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.image-thumbnails img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.image-thumbnails img:hover {
+  border-color: #333;
+}
+
+.des-card {
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 95%;
+
+
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faStar {
+  color: gold
+}
+
+
+/* Base style for the heart icon */
+.faHeart {
+  font-size: 24px;          /* Adjust size */
+  color: #ccc;              /* Default color (e.g., gray) */
+  cursor: pointer;          /* Change cursor to pointer on hover */
+  transition: color 0.3s;   /* Smooth transition for color change */
+}
+
+/* Style when the heart is marked as favorite */
+.faHeart.favorite {
+  color: red;               /* Change color to red when favorite */
+}
+
+/* Optional: Add a hover effect */
+.faHeart:hover {
+  color: #ff6666;           /* Slightly lighter red on hover */
 }
