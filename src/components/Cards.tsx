@@ -1,84 +1,43 @@
-// import React, { useState } from 'react'
-// import Card from './Card'
-// import { Room, Hotel } from '../types';
-// interface CardsProps {
-//     rooms?: Room[];
-//     hotels?: Hotel[];
-// }
-// const Cards: React.FC<CardsProps> = ({ rooms, hotels }) => {
-//     const [favoriteList, setFavoriteList] = useState<(number | string)[]>([]);
-//     const toggleFavorite = (id: number | string) => {
-//         setFavoriteList(prev =>
-//             prev.includes(id) ? prev.filter(favId => favId !== id) : [...prev, id]
-//         );
-//     };
-//     console.log(favoriteList)
-//     console.log(rooms)
-//     return (
-//         <div className='cards'>
-//             {
-//                 rooms?.map((room) => (
-//                     // {console.log(3)}
-//                     <Card key={room.id} RCard={room} toggleFavorite={toggleFavorite} isFavorite={favoriteList.includes(room.id)} />
-//                 ))
-//             }
-//             {
-//                 hotels?.map((hotel) => (
-//                     <Card key={hotel.id} HCard={hotel} toggleFavorite={toggleFavorite} isFavorite={favoriteList.includes(hotel.id)} />
-//                 ))
-//             }
-//         </div>
-//     )
-// }
+import React, { useState } from 'react'
+import Card from './Card'
+import { Room, Hotel ,FavoriteItem} from '../types';
 
-// export default Cards
-
-
-
-
-
-import React, { useState } from 'react';
-import Card from './Card';
-import { Room, Hotel } from '../types';
-
-interface CardsProps {
-    rooms?: Room[];
+interface Prop {
+    rooms?: Room[]|Room;
     hotels?: Hotel[];
+    toggleFavorite: (item: { id: number | string; type: 'room' | 'hotel' }) => void;
+
+    favoriteList: FavoriteItem[];
 }
+const Cards: React.FC<Prop> = ({ rooms=[], hotels=[],toggleFavorite, favoriteList }) => {
+  
 
-const Cards: React.FC<CardsProps> = ({ rooms, hotels }) => {
-    const [favoriteList, setFavoriteList] = useState<(number | string)[]>([]);
-    
-    const toggleFavorite = (id: number | string) => {
-        setFavoriteList(prev =>
-            prev.includes(id) ? prev.filter(favId => favId !== id) : [...prev, id]
-        );
-    };
-    
-    console.log('Favorite List:', favoriteList);
-    console.log('Rooms:', rooms);
-    console.log('Hotels:', hotels);
-
+    const roomArray = Array.isArray(rooms) ? rooms : rooms ? [rooms] : [];
+    // console.log(favoriteList)
+    // console.log(rooms)
     return (
         <div className='cards'>
-            {rooms?.map((room) => (
-                <Card 
-                    key={room.id} 
-                    RCard={room} 
-                    toggleFavorite={toggleFavorite} 
-                    isFavorite={favoriteList.includes(room.id)} 
-                />
-            ))}
-            {hotels?.map((hotel) => (
-                <Card 
-                    key={hotel.id} 
-                    HCard={hotel} 
-                    toggleFavorite={toggleFavorite} 
-                    isFavorite={favoriteList.includes(hotel.id)} 
-                />
-            ))}
+             {
+                roomArray.map((room) => (
+                    <Card 
+                        key={room.id} 
+                        RCard={room} 
+                        toggleFavorite={toggleFavorite} 
+                        isFavorite={favoriteList.some(fav => fav.id === room.id && fav.type === 'room')} 
+                    />
+                ))
+            }
+            {
+                hotels?.map((hotel) => (
+                    <Card key={hotel.id} HCard={hotel} toggleFavorite={toggleFavorite} isFavorite={favoriteList.some(fav => fav.id === hotel.id && fav.type === 'hotel')} />
+                ))
+            }
         </div>
-    );
-};
+    )
+}
 
-export default Cards;
+export default Cards
+
+
+
+

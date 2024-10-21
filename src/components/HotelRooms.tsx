@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Room } from '../types';
 import Cards from './Cards';
 import { rooms } from '../mockData';
+import { Room ,FavoriteItem} from '../types';
 
-
-const HotelRooms: React.FC = () => {
+  interface Prop {
+    toggleFavorite: (item: { id: number | string; type: 'room' | 'hotel' }) => void;
+    favoriteList: FavoriteItem[];
+  }
+const HotelRooms: React.FC<Prop> = ({favoriteList,toggleFavorite}) => {
     const { hotelId } = useParams<{ hotelId: string }>();
     const [filterRooms,setFilterRooms]=useState<Room[]>([])
 useEffect(()=>{
@@ -14,11 +17,10 @@ useEffect(()=>{
 
     }
 },[hotelId])
-console.log(filterRooms)
     return (
         <div>
             <h1>Rooms for Hotel {hotelId}</h1>
-    <Cards  rooms={filterRooms} />
+    <Cards  rooms={filterRooms} toggleFavorite={toggleFavorite} favoriteList={favoriteList}  />
         </div>
     );
 };

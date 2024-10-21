@@ -1,29 +1,25 @@
-import SearchBar from '../components/SearchBar'
-import FeaturedDealItem from '../components/FeaturedDealItem'
-import RecentlyVisited from '../components/RecentlyVisited'
 import Header from '../components/Header'
-import Cards from '../components/Cards'
 import HotelList from '../components/HolelList'
-import HotelRooms from '../components/HotelRooms'
-import { rooms } from '../mockData'
-import { hotels } from '../mockData'
-import { useState } from 'react'
-import {  Routes, Route } from 'react-router-dom';
-
-
-const Home: React.FC = () => {
- 
-  // console.log(favoriteList)
+import SearchBar from '../components/SearchBar';
+import {FavoriteItem, Hotel } from '../types'
+interface prop{
+  
+    toggleFavorite: (item: { id: number | string; type: 'room' | 'hotel' }) => void; 
+    favoriteList: FavoriteItem[] ;
+    data:Hotel[]
+   
+}
+const Home: React.FC<prop> = ({ toggleFavorite, favoriteList ,data}) => {
   return (
     <div className='home'>
-      <Header />
-            <Routes>
-                <Route path="/" element={<HotelList />} />
-                <Route path="/hotel/:hotelId/rooms" element={<HotelRooms />} />
-            </Routes>
-      {/* <Cards rooms={rooms} hotels={hotels} toggleFavorite={toggleFavorite} favoriteList={favoriteList} /> */}
-      
+        <div className='header-search d-flex'>
 
+      <Header />
+      <SearchBar toggleFavorite={toggleFavorite} favoriteList={favoriteList}/>
+      </div>
+
+      <HotelList toggleFavorite={toggleFavorite} favoriteList={favoriteList} data={data}/>
+          
     </div>
   )
 }

@@ -11,7 +11,7 @@ interface Capacity {
     starRating:number;
     capacity: Capacity;
     price: number;
-    available: boolean;
+
     amenities: string[];
     gallery: { 
         image1:string,
@@ -19,6 +19,8 @@ interface Capacity {
         image3:string,
         image4:string
       };
+      availabilityDates: Date[]
+
   }
 
   export interface Hotel {
@@ -34,14 +36,23 @@ interface Capacity {
         image3:string,
         image4:string
       };
-      rooms: number[]
+      rooms: number[],
   }
 
 
+  export interface FavoriteItem {
+    id: number | string;
+    type: 'room' | 'hotel';
+  }
 
 
-
-
+  export interface User {
+    id: number;
+    username: string;
+    email: string;     
+    password: string;
+    role: 'user' | 'admin';
+  }
 
 
 

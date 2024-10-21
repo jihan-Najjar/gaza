@@ -1,10 +1,18 @@
 import React from 'react'
-import { hotels } from '../mockData';
 import Cards from './Cards';
-const HotelList:React.FC = () => {
+import { Room, Hotel ,FavoriteItem} from '../types';
+
+interface Prop {
+data:Hotel[];
+
+  toggleFavorite: (item: { id: number | string; type: 'room' | 'hotel' }) => void;
+  favoriteList: FavoriteItem[];
+}
+
+const HotelList:React.FC<Prop> = ({favoriteList,toggleFavorite,data}) => {
   return (
     <div className="hotel-list">
-    <Cards hotels={hotels}  />
+    <Cards hotels={data} toggleFavorite={toggleFavorite} favoriteList={favoriteList}  />
 </div>
   )
 }

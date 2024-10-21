@@ -1,45 +1,53 @@
-import { Room } from './types';
-import { Hotel } from './types';
-const users = [
-    {
-      id: 1,
-      username: "admin",
-      password: "admin123",
-      role: "admin"
-    },
-    {
-      id: 2,
-      username: "user1",
-      password: "user123",
-      role: "user"
-    },
-    {
-      id: 3,
-      username: "user2",
-      password: "user456",
-      role: "user"
-    },
-    {
-        id: 4,
-        username: "admin2",
-        password: "admin12",
-        role: "admin"
-      },
-      {
-        id: 5,
-        username: "user3",
-        password: "user1234",
-        role: "user"
-      },
-      {
-        id: 6,
-        username: "user4",
-        password: "user",
-        role: "user"
-      }
-  ];
-  export {users}
-  
+// import { Room } from './types';
+import { Hotel,User, Room } from './types';
+
+
+const users: User[] = [
+  {
+    id: 1,
+    username: "admin",
+    email: "admin@example.com",
+    password: "admin123",
+    role: "admin"
+  },
+  {
+    id: 2,
+    username: "user1",
+    email: "user1@example.com",
+    password: "user1233",
+    role: "user"
+  },
+  {
+    id: 3,
+    username: "user2",
+    email: "user2@example.com",
+    password: "user456",
+    role: "user"
+  },
+  {
+    id: 4,
+    username: "admin2",
+    email: "admin2@example.com",
+    password: "admin12",
+    role: "admin"
+  },
+  {
+    id: 5,
+    username: "user3",
+    email: "user3@example.com",
+    password: "user1234",
+    role: "user"
+  },
+  {
+    id: 6,
+    username: "user4",
+    email: "user4@example.com",
+    password: "user5678",
+    role: "user"
+  }
+];
+
+export { users };
 
 
   const rooms: Room[] = [
@@ -54,7 +62,7 @@ const users = [
         children: 1
       },
       price: 150,
-      available: true,
+ 
       amenities: ["Free Breakfast", "Ocean View"],
       gallery: {
         image1: require("./assets/images/Ra1.webp"),
@@ -62,6 +70,11 @@ const users = [
         image3: require("./assets/images/Ra3.webp"),
         image4: require("./assets/images/Ra4.webp"),
       },
+      availabilityDates: [
+        new Date(2024, 9, 25),
+        new Date(2024, 9, 26),
+        new Date(2024, 9, 28),
+      ]
     },
     {
       id: 102,
@@ -74,7 +87,6 @@ const users = [
         children: 2
       },
       price: 300,
-      available: false,
       amenities: ["Free Breakfast", "Living Room", "Kitchen"],
       gallery: {
         image1: require("./assets/images/Rb1.webp"),
@@ -82,6 +94,11 @@ const users = [
         image3: require("./assets/images/Rb3.webp"),
         image4: require("./assets/images/Rb4.webp"),
       },
+      availabilityDates: [
+        new Date(2024, 7, 25),
+        new Date(2024, 7, 26),
+        new Date(2024, 7, 28),
+      ]
     },
     {
       id: 103,
@@ -94,7 +111,7 @@ const users = [
         children: 0
       },
       price: 100,
-      available: true,
+ 
       amenities: ["Free Wi-Fi", "Garden View"],
       gallery: {
         image1: require("./assets/images/Rc1.webp"),
@@ -102,6 +119,11 @@ const users = [
         image3: require("./assets/images/Rc3.webp"),
         image4: require("./assets/images/Rc4.webp"),
       },
+      availabilityDates: [
+        new Date(2024, 7, 25),
+        new Date(2024, 7, 26),
+        new Date(2024, 7, 28),
+      ]
     },
     {
       id: 104,
@@ -114,7 +136,7 @@ const users = [
         children: 1
       },
       price: 200,
-      available: true,
+ 
       amenities: ["Free Breakfast", "Sea View"],
       gallery: {
         image1: require("./assets/images/Rd1.webp"),
@@ -122,6 +144,11 @@ const users = [
         image3: require("./assets/images/Rd3.webp"),
         image4: require("./assets/images/Rd4.webp"),
       },
+      availabilityDates: [
+        new Date(2024, 7, 25),
+        new Date(2024, 7, 26),
+        new Date(2024, 7, 28),
+      ]
     },
     {
       id: 105,
@@ -134,7 +161,6 @@ const users = [
         children: 2
       },
       price: 350,
-      available: false,
       amenities: ["Free Wi-Fi", "Private Pool", "Kitchen"],
       gallery: {
         image1: require("./assets/images/Re1.webp"),
@@ -142,6 +168,11 @@ const users = [
         image3: require("./assets/images/Re3.webp"),
         image4: require("./assets/images/Re4.webp"),
       },
+      availabilityDates: [
+        new Date(2024, 7, 25),
+        new Date(2024, 7, 26),
+        new Date(2024, 7, 28),
+      ]
     },
     {
       id: 106,
@@ -154,7 +185,7 @@ const users = [
         children: 0
       },
       price: 120,
-      available: true,
+ 
       amenities: ["Free Wi-Fi", "Mountain View"],
       gallery: {
         image1: require("./assets/images/Rf1.webp"),
@@ -162,6 +193,11 @@ const users = [
         image3: require("./assets/images/Rf3.webp"),
         image4: require("./assets/images/Rf4.webp"),
       },
+      availabilityDates: [
+        new Date(2024, 7, 25),
+        new Date(2024, 7, 26),
+        new Date(2024, 7, 28),
+      ]
     },
     {
       id: 107,
@@ -174,7 +210,7 @@ const users = [
         children: 1
       },
       price: 180,
-      available: true,
+ 
       amenities: ["Free Breakfast", "City View"],
       gallery: {
         image1: require("./assets/images/Rg1.webp"),
@@ -182,6 +218,11 @@ const users = [
         image3: require("./assets/images/Rg3.webp"),
         image4: require("./assets/images/Rg4.webp"),
       },
+      availabilityDates: [
+        new Date(2024, 7, 25),
+        new Date(2024, 7, 26),
+        new Date(2024, 7, 28),
+      ]
     },
     {
       id: 201,
@@ -194,7 +235,6 @@ const users = [
         children: 2
       },
       price: 400,
-      available: false,
       amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
       gallery: {
         image1: require("./assets/images/Rh1.webp"),
@@ -202,6 +242,11 @@ const users = [
         image3: require("./assets/images/Rh3.webp"),
         image4: require("./assets/images/Rh4.webp"),
       },
+      availabilityDates: [
+        new Date(2024, 7, 25),
+        new Date(2024, 7, 26),
+        new Date(2024, 7, 28),
+      ]
     },
     {
         id: 202,
@@ -214,7 +259,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -222,6 +267,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 204,
         hotelId: 2,
@@ -233,7 +283,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -241,6 +291,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 205,
         hotelId: 2,
@@ -252,7 +307,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -260,6 +315,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, 
       {
         id: 206,
@@ -272,7 +332,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -280,6 +340,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 207,
         hotelId: 2,
@@ -291,7 +356,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -299,6 +364,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 301,
         hotelId: 3,
@@ -310,7 +380,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -318,6 +388,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 302,
         hotelId: 3,
@@ -329,7 +404,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -337,6 +412,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 303,
         hotelId: 3,
@@ -348,7 +428,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -356,6 +436,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 304,
         hotelId: 3,
@@ -367,7 +452,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -375,6 +460,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 305,
         hotelId: 3,
@@ -386,7 +476,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -394,6 +484,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 306,
         hotelId: 3,
@@ -405,7 +500,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -413,6 +508,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 307,
         hotelId: 3,
@@ -424,7 +524,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -432,6 +532,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 308,
         hotelId: 3,
@@ -443,7 +548,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -451,6 +556,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 401,
         hotelId: 4,
@@ -462,7 +572,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -470,6 +580,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 402,
         hotelId: 4,
@@ -481,7 +596,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -489,6 +604,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 403,
         hotelId: 4,
@@ -500,7 +620,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -508,6 +628,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 404,
         hotelId: 4,
@@ -519,7 +644,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -527,6 +652,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 405,
         hotelId: 4,
@@ -538,7 +668,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -546,6 +676,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 406,
         hotelId: 4,
@@ -557,7 +692,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -565,6 +700,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 407,
         hotelId: 4,
@@ -576,7 +716,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -584,6 +724,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 408,
         hotelId: 4,
@@ -595,7 +740,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -603,6 +748,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 409,
         hotelId: 4,
@@ -614,7 +764,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -622,6 +772,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 501,
         hotelId: 5,
@@ -633,7 +788,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -641,6 +796,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 502,
         hotelId: 5,
@@ -652,7 +812,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -660,6 +820,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 503,
         hotelId: 5,
@@ -671,7 +836,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -679,6 +844,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 504,
         hotelId: 5,
@@ -690,7 +860,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -698,6 +868,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 505,
         hotelId: 5,
@@ -709,7 +884,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -717,6 +892,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 506,
         hotelId: 5,
@@ -728,7 +908,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -736,6 +916,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 507,
         hotelId: 5,
@@ -747,7 +932,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -755,6 +940,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 601,
         hotelId: 6,
@@ -766,7 +956,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -774,6 +964,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 602,
         hotelId: 6,
@@ -785,7 +980,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -793,6 +988,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 603,
         hotelId: 6,
@@ -804,14 +1004,18 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
           image2: require("./assets/images/RJ2.webp"),
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
-        },
+        }, availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 604,
         hotelId: 6,
@@ -823,7 +1027,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -831,6 +1035,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 605,
         hotelId: 6,
@@ -842,7 +1051,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -850,6 +1059,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 606,
         hotelId: 6,
@@ -861,7 +1075,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -869,6 +1083,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 607,
         hotelId: 6,
@@ -880,7 +1099,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -888,6 +1107,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 608,
         hotelId: 6,
@@ -899,7 +1123,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -907,6 +1131,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 609,
         hotelId: 6,
@@ -918,7 +1147,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -926,6 +1155,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 610,
         hotelId: 6,
@@ -937,7 +1171,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -945,6 +1179,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 701,
         hotelId: 7,
@@ -956,7 +1195,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -964,6 +1203,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 702,
         hotelId: 7,
@@ -975,7 +1219,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -983,6 +1227,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 703,
         hotelId: 7,
@@ -994,14 +1243,19 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
           image2: require("./assets/images/Rk2.webp"),
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
-        },
+        }, 
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 704,
         hotelId: 7,
@@ -1013,7 +1267,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -1021,6 +1275,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 705,
         hotelId: 7,
@@ -1032,7 +1291,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -1040,6 +1299,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 706,
         hotelId: 7,
@@ -1051,7 +1315,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -1059,6 +1323,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 707,
         hotelId: 7,
@@ -1070,7 +1339,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -1078,6 +1347,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 801,
         hotelId: 8,
@@ -1089,7 +1363,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -1097,6 +1371,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 802,
         hotelId: 8,
@@ -1108,7 +1387,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -1116,6 +1395,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 803,
         hotelId: 8,
@@ -1127,7 +1411,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -1135,6 +1419,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 804,
         hotelId: 8,
@@ -1146,7 +1435,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -1154,6 +1443,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 805,
         hotelId: 8,
@@ -1165,7 +1459,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -1173,6 +1467,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 806,
         hotelId: 8,
@@ -1184,7 +1483,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -1192,6 +1491,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 422,
         hotelId: 3,
@@ -1203,7 +1507,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -1211,6 +1515,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 807,
         hotelId: 8,
@@ -1222,7 +1531,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -1230,6 +1539,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 809,
         hotelId: 8,
@@ -1241,7 +1555,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -1249,6 +1563,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 901,
         hotelId: 9,
@@ -1260,7 +1579,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -1268,6 +1587,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 902,
         hotelId: 9,
@@ -1279,7 +1603,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -1287,6 +1611,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 903,
         hotelId: 9,
@@ -1298,7 +1627,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -1306,6 +1635,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 904,
         hotelId: 9,
@@ -1317,7 +1651,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -1325,6 +1659,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 905,
         hotelId: 9,
@@ -1336,7 +1675,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -1344,6 +1683,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 906,
         hotelId: 9,
@@ -1355,7 +1699,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -1363,6 +1707,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 908,
         hotelId: 9,
@@ -1374,7 +1723,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -1382,6 +1731,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 907,
         hotelId: 9,
@@ -1393,7 +1747,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -1401,6 +1755,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       }, {
         id: 1001,
         hotelId: 10,
@@ -1412,7 +1771,7 @@ const users = [
           children: 2
         },
         price: 500,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Ri1.webp"),
@@ -1420,6 +1779,11 @@ const users = [
           image3: require("./assets/images/Ri3.webp"),
           image4: require("./assets/images/Ri4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 1002,
         hotelId: 10,
@@ -1431,7 +1795,7 @@ const users = [
           children: 0
         },
         price:350,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rj1.webp"),
@@ -1439,6 +1803,11 @@ const users = [
           image3: require("./assets/images/Rj3.webp"),
           image4: require("./assets/images/Rj4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 1003,
         hotelId: 10,
@@ -1450,7 +1819,7 @@ const users = [
           children: 0
         },
         price: 450,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rk1.webp"),
@@ -1458,6 +1827,11 @@ const users = [
           image3: require("./assets/images/Rk3.webp"),
           image4: require("./assets/images/Rk4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },  {
         id: 1004,
         hotelId: 10,
@@ -1469,7 +1843,7 @@ const users = [
           children: 1
         },
         price: 150,
-        available: true,
+   
         amenities: ["Free Breakfast", "Ocean View"],
         gallery: {
           image1: require("./assets/images/Ra1.webp"),
@@ -1477,6 +1851,11 @@ const users = [
           image3: require("./assets/images/Ra3.webp"),
           image4: require("./assets/images/Ra4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },
       {
         id: 1005,
@@ -1489,7 +1868,7 @@ const users = [
           children: 2
         },
         price: 300,
-        available: false,
+
         amenities: ["Free Breakfast", "Living Room", "Kitchen"],
         gallery: {
           image1: require("./assets/images/Rb1.webp"),
@@ -1497,6 +1876,11 @@ const users = [
           image3: require("./assets/images/Rb3.webp"),
           image4: require("./assets/images/Rb4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },
       {
         id: 1006,
@@ -1509,7 +1893,7 @@ const users = [
           children: 0
         },
         price: 100,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Garden View"],
         gallery: {
           image1: require("./assets/images/Rc1.webp"),
@@ -1517,6 +1901,11 @@ const users = [
           image3: require("./assets/images/Rc3.webp"),
           image4: require("./assets/images/Rc4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },
       {
         id: 1007,
@@ -1529,7 +1918,7 @@ const users = [
           children: 1
         },
         price: 200,
-        available: true,
+   
         amenities: ["Free Breakfast", "Sea View"],
         gallery: {
           image1: require("./assets/images/Rd1.webp"),
@@ -1537,6 +1926,11 @@ const users = [
           image3: require("./assets/images/Rd3.webp"),
           image4: require("./assets/images/Rd4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },
       {
         id: 1008,
@@ -1549,7 +1943,7 @@ const users = [
           children: 2
         },
         price: 350,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Pool", "Kitchen"],
         gallery: {
           image1: require("./assets/images/Re1.webp"),
@@ -1557,6 +1951,11 @@ const users = [
           image3: require("./assets/images/Re3.webp"),
           image4: require("./assets/images/Re4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },
       {
         id: 1009,
@@ -1569,7 +1968,7 @@ const users = [
           children: 0
         },
         price: 120,
-        available: true,
+   
         amenities: ["Free Wi-Fi", "Mountain View"],
         gallery: {
           image1: require("./assets/images/Rf1.webp"),
@@ -1577,6 +1976,11 @@ const users = [
           image3: require("./assets/images/Rf3.webp"),
           image4: require("./assets/images/Rf4.webp"),
         },
+        availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },
       {
         id: 1010,
@@ -1589,14 +1993,18 @@ const users = [
           children: 1
         },
         price: 180,
-        available: true,
+   
         amenities: ["Free Breakfast", "City View"],
         gallery: {
           image1: require("./assets/images/Rg1.webp"),
           image2: require("./assets/images/Rg2.webp"),
           image3: require("./assets/images/Rg3.webp"),
           image4: require("./assets/images/Rg4.webp"),
-        },
+        }, availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },
       {
         id: 1011,
@@ -1609,14 +2017,18 @@ const users = [
           children: 2
         },
         price: 400,
-        available: false,
+
         amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
         gallery: {
           image1: require("./assets/images/Rh1.webp"),
           image2: require("./assets/images/Rh2.webp"),
           image3: require("./assets/images/Rh3.webp"),
           image4: require("./assets/images/Rh4.webp"),
-        },
+        }, availabilityDates: [
+          new Date(2024, 7, 25),
+          new Date(2024, 7, 26),
+          new Date(2024, 7, 28),
+        ]
       },
       {
           id: 1012,
@@ -1629,14 +2041,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1101,
           hotelId: 11,
@@ -1648,14 +2064,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1102,
           hotelId: 11,
@@ -1667,14 +2087,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, 
         {
           id: 1103,
@@ -1687,14 +2111,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1104,
           hotelId: 11,
@@ -1706,14 +2134,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1105,
           hotelId: 11,
@@ -1725,14 +2157,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1106,
           hotelId: 11,
@@ -1744,14 +2180,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1107,
           hotelId: 11,
@@ -1763,14 +2203,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1108,
           hotelId: 11,
@@ -1782,14 +2226,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1201,
       hotelId: 12,
@@ -1801,14 +2249,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1202,
       hotelId: 12,
@@ -1820,14 +2272,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1203,
       hotelId: 12,
@@ -1839,14 +2295,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1204,
       hotelId: 12,
@@ -1858,14 +2318,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1205,
           hotelId: 12,
@@ -1877,14 +2341,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1206,
           hotelId: 12,
@@ -1896,14 +2364,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1207,
           hotelId: 12,
@@ -1915,14 +2387,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1301,
           hotelId: 13,
@@ -1934,14 +2410,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1302,
      hotelId: 13,
@@ -1953,14 +2433,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1303,
      hotelId: 13,
@@ -1972,14 +2456,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1304,
      hotelId: 13,
@@ -1991,14 +2479,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1305,
      hotelId: 13,
@@ -2010,14 +2502,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1306,
      hotelId: 13,
@@ -2029,14 +2525,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1307,
           hotelId: 13,
@@ -2048,14 +2548,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1308,
           hotelId: 13,
@@ -2067,14 +2571,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1401,
             hotelId: 14,
@@ -2086,14 +2594,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1402,
             hotelId: 14,
@@ -2105,14 +2617,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1403,
             hotelId: 14,
@@ -2124,14 +2640,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1404,
             hotelId: 14,
@@ -2143,14 +2663,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1405,
             hotelId: 14,
@@ -2162,14 +2686,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1406,
           hotelId: 14,
@@ -2181,14 +2709,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1501,
           hotelId: 15,
@@ -2200,14 +2732,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1502,
           hotelId: 15,
@@ -2219,14 +2755,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1503,
           hotelId: 15,
@@ -2238,14 +2778,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1504,
           hotelId: 15,
@@ -2257,14 +2801,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1505,
           hotelId: 15,
@@ -2276,14 +2824,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1506,
           hotelId: 15,
@@ -2295,14 +2847,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1507,
           hotelId: 15,
@@ -2314,14 +2870,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1508,
           hotelId: 15,
@@ -2333,14 +2893,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1601,
           hotelId: 16,
@@ -2352,14 +2916,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1602,
           hotelId: 16,
@@ -2371,14 +2939,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1603,
           hotelId: 16,
@@ -2390,14 +2962,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1604,
           hotelId: 16,
@@ -2409,14 +2985,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1605,
           hotelId: 16,
@@ -2428,14 +3008,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1606,
           hotelId: 16,
@@ -2447,14 +3031,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1607,
           hotelId: 16,
@@ -2466,14 +3054,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1701,
           hotelId: 17,
@@ -2485,14 +3077,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1702,
          hotelId: 17,
@@ -2504,14 +3100,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1703,
          hotelId: 17,
@@ -2523,14 +3123,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1704,
          hotelId: 17,
@@ -2542,14 +3146,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1705,
          hotelId: 17,
@@ -2561,14 +3169,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1706,
          hotelId: 17,
@@ -2580,14 +3192,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1707,
          hotelId: 17,
@@ -2599,14 +3215,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1708,
           hotelId: 17,
@@ -2618,14 +3238,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1709,
          hotelId: 17,
@@ -2637,14 +3261,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1710,
          hotelId: 17,
@@ -2656,14 +3284,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1801,
           hotelId:18,
@@ -2675,14 +3307,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1802,
           hotelId:18,
@@ -2694,14 +3330,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1803,
           hotelId:18,
@@ -2713,14 +3353,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1804,
           hotelId:18,
@@ -2732,14 +3376,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1805,
           hotelId:18,
@@ -2751,14 +3399,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1806,
           hotelId:18,
@@ -2770,14 +3422,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1807,
           hotelId:18,
@@ -2789,14 +3445,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1808,
           hotelId:18,
@@ -2808,14 +3468,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1809,
           hotelId: 18,
@@ -2827,14 +3491,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1810,
           hotelId: 18,
@@ -2846,14 +3514,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1811,
           hotelId: 18,
@@ -2865,14 +3537,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, 
         {
           id: 1812,
@@ -2885,14 +3561,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1901,
      hotelId: 19,
@@ -2904,14 +3584,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1902,
      hotelId: 19,
@@ -2923,14 +3607,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1903,
           hotelId: 19,
@@ -2942,14 +3630,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1904,
           hotelId: 19,
@@ -2961,14 +3653,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1905,
             hotelId: 19,
@@ -2980,14 +3676,18 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
             image2: require("./assets/images/Ri2.webp"),
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1906,
             hotelId: 19,
@@ -2999,14 +3699,18 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
             image2: require("./assets/images/RJ2.webp"),
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1907,
             hotelId: 19,
@@ -3018,14 +3722,18 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+     
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
             image2: require("./assets/images/Rk2.webp"),
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
-          },
+          }, availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 1908,
             hotelId: 19,
@@ -3037,7 +3745,7 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+  
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
@@ -3045,6 +3753,11 @@ const users = [
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
           },
+          availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 1909,
             hotelId: 19,
@@ -3056,7 +3769,7 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+   
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
@@ -3064,6 +3777,11 @@ const users = [
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
           },
+          availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 2001,
           hotelId: 20,
@@ -3075,7 +3793,7 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+   
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
@@ -3083,6 +3801,11 @@ const users = [
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
           },
+          availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 2002,
           hotelId: 20,
@@ -3094,7 +3817,7 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
@@ -3102,6 +3825,11 @@ const users = [
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
           },
+          availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 2003,
           hotelId: 20,
@@ -3113,7 +3841,7 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+   
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
@@ -3121,6 +3849,11 @@ const users = [
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
           },
+          availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 2004,
           hotelId: 20,
@@ -3132,7 +3865,7 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+         
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
@@ -3140,6 +3873,11 @@ const users = [
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
           },
+          availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 2005,
           hotelId: 20,
@@ -3151,7 +3889,7 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
+    
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
@@ -3159,6 +3897,11 @@ const users = [
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
           },
+          availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 2006,
           hotelId: 20,
@@ -3170,7 +3913,7 @@ const users = [
             children: 0
           },
           price:350,
-          available: true,
+ 
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rj1.webp"),
@@ -3178,6 +3921,11 @@ const users = [
             image3: require("./assets/images/Rj3.webp"),
             image4: require("./assets/images/Rj4.webp"),
           },
+          availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         },  {
           id: 2007,
           hotelId: 20,
@@ -3189,7 +3937,7 @@ const users = [
             children: 0
           },
           price: 450,
-          available: true,
+    
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Rk1.webp"),
@@ -3197,6 +3945,11 @@ const users = [
             image3: require("./assets/images/Rk3.webp"),
             image4: require("./assets/images/Rk4.webp"),
           },
+          availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
         }, {
           id: 2008,
           hotelId: 20,
@@ -3208,7 +3961,6 @@ const users = [
             children: 2
           },
           price: 500,
-          available: false,
           amenities: ["Free Wi-Fi", "Private Balcony", "Hot Tub"],
           gallery: {
             image1: require("./assets/images/Ri1.webp"),
@@ -3216,6 +3968,12 @@ const users = [
             image3: require("./assets/images/Ri3.webp"),
             image4: require("./assets/images/Ri4.webp"),
           },
+          availabilityDates: [
+            new Date(2024, 7, 25),
+            new Date(2024, 7, 26),
+            new Date(2024, 7, 28),
+          ]
+
         }, 
   ];
   
@@ -3223,7 +3981,7 @@ const users = [
   const hotels: Hotel[] = [
     {
       id: 1,
-      name: "Hotel Serenity",
+      name: "Serenity",
       location: "Istanbul, Turkey",
       starRating: 4.6,
       description: "Experience peace and luxury in the heart of Istanbul.",
